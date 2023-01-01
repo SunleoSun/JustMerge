@@ -6,10 +6,10 @@ namespace GUI
 {
     public partial class TwoWayCompare : Form
     {
-        readonly Options2Files options;
+        readonly CLIOptions options;
         private readonly List<Diff> diff;
 
-        public TwoWayCompare(Options2Files options)
+        public TwoWayCompare(CLIOptions options)
         {
             InitializeComponent();
             this.options = options;

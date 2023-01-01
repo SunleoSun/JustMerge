@@ -2,7 +2,7 @@
   "profiles": {
     "GUI": {
       "commandName": "Project",
-      "commandLineArgs": "-l asd -r asd"
+      "commandLineArgs": "-l C:\\Temp\\1.txt -r C:\\Temp\\2.txt"
     }
   }
 }

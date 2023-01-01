@@ -1,4 +1,4 @@
-﻿namespace SharpClipboard
+﻿namespace GUI
 {
     public static class Log
     {
