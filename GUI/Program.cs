@@ -21,17 +21,17 @@ namespace GUI
             ApplicationConfiguration.Initialize();
 
             parsedArguments.MapResult(
-                (CLIOptions options) =>
-                {
-                    Application.Run(new TwoWayMerge(options));
-                    return 0;
-                },
-                errors =>
-                {
-                    var errorText = HelpText.AutoBuild(parsedArguments, h => HelpText.DefaultParsingErrorsHandler(parsedArguments, h));
-                    MessageBox.Show($"Please, correctly specify command arguments. {Environment.NewLine}{errorText}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return 1;
-                });
+              (CLIOptions options) =>
+              {
+                  Log.LogErrors(() => Application.Run(new TwoWayCompare(options)));
+                  return 0;
+              },
+              errors =>
+              {
+                  var errorText = HelpText.AutoBuild(parsedArguments, h => HelpText.DefaultParsingErrorsHandler(parsedArguments, h));
+                  MessageBox.Show($"Please, correctly specify command arguments. {Environment.NewLine}{errorText}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                  return 1;
+              });
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
 
