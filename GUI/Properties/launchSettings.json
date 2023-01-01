@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "GUI": {
+      "commandName": "Project",
+      "commandLineArgs": "compare C:\\Temp\\1.txt C:\\Temp\\2.txt"
+    }
+  }
+}

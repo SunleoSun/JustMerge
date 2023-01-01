@@ -2,9 +2,9 @@
 
 namespace GUI
 {
-    public partial class ThreeWayMerge : Form
+    public partial class ThreeWayCompare : Form
     {
-        public ThreeWayMerge(Options3Files options)
+        public ThreeWayCompare(Options3Files options)
         {
             InitializeComponent();
         }

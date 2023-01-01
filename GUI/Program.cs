@@ -1,6 +1,7 @@
 using CommandLine;
 using CommandLine.Text;
 using GUI.Cli;
+using SharpClipboard;
 
 namespace GUI
 {
@@ -23,12 +24,12 @@ namespace GUI
             parsedArguments.MapResult(
               (Options2Files options) =>
               {
-                  Application.Run(new TwoWayMerge(options));
+                  Log.LogErrors(() => Application.Run(new TwoWayCompare(options)));
                   return 0;
               },
               (Options3Files options) =>
               {
-                  Application.Run(new ThreeWayMerge(options));
+                  Log.LogErrors(() => Application.Run(new ThreeWayCompare(options)));
                   return 0;
               },
               errors =>
