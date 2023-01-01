@@ -4,7 +4,7 @@ namespace GUI
 {
     public partial class ThreeWayMerge : Form
     {
-        public ThreeWayMerge(Options3Files options)
+        public ThreeWayMerge(CLIOptions options)
         {
             InitializeComponent();
         }

@@ -5,9 +5,13 @@ namespace GUI
 {
     public partial class TwoWayMerge : Form
     {
-        public TwoWayMerge(Options2Files options)
+        private readonly CLIOptions options;
+
+        public TwoWayMerge(CLIOptions options)
         {
             InitializeComponent();
+            this.options = options;
         }
+        
     }
 }
